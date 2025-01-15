@@ -1,0 +1,69 @@
+<div class="container mt-5">
+  <!-- Display loading state while fetching data -->
+  <div *ngIf="loading" class="alert alert-info shadow-lg rounded-md p-4">
+    <strong class="font-bold">Loading operations...</strong>
+  </div>
+
+  <!-- Filter Controls -->
+  <div class="mb-5 p-4 bg-gray-100 shadow-md rounded-lg">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Search by Operation Type -->
+      <div>
+        <label for="searchTerm" class="block text-sm font-semibold mb-2">Search Operation Type:</label>
+        <select
+          id="searchTerm"
+          [(ngModel)]="searchTerm"
+          class="form-select form-control-sm w-full px-3 py-2 border rounded-md shadow-sm"
+          (change)="filterOperations()"> <!-- Call filter function on change -->
+          <option value="">All</option>
+          <option value="DEBIT">DEBIT</option>
+          <option value="CREDIT">CREDIT</option>
+        </select>
+      </div>
+
+      <!-- Date Range Filters (Start Date & End Date) -->
+      <div class="md:col-span-2">
+        <div class="flex justify-between space-x-4">
+          <!-- Start Date Filter -->
+          <div class="flex-1">
+            <label for="startDate" class="block text-sm font-semibold mb-2">Start Date:</label>
+            <input
+              type="date"
+              id="startDate"
+              [(ngModel)]="startDate"
+              class="form-control w-full px-3 py-2 border rounded-md shadow-sm"
+              (change)="filterOperations()"> <!-- Call filter function on change -->
+          </div>
+
+          <!-- End Date Filter -->
+          <div class="flex-1">
+            <label for="endDate" class="block text-sm font-semibold mb-2">End Date:</label>
+            <input
+              type="date"
+              id="endDate"
+              [(ngModel)]="endDate"
+              class="form-control w-full px-3 py-2 border rounded-md shadow-sm"
+              (change)="filterOperations()"> <!-- Call filter function on change -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Display operations -->
+  <div *ngIf="!loading && filteredOperations.length > 0">
+    <div *ngFor="let operation of filteredOperations" class="card mb-3 shadow-lg rounded-lg">
+      <div class="card-body bg-white p-4">
+        <p class="text-lg font-semibold text-gray-800"><strong>Operation Type:</strong> {{ operation.type }}</p>
+        <p class="text-base text-gray-600"><strong>Description:</strong> {{ operation.description }}</p>
+        <p class="text-base text-gray-600"><strong>Amount:</strong> {{ operation.amount | currency }}</p>
+        <p class="text-base text-gray-600"><strong>Date:</strong> {{ operation.operationDate | date }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Display message if no operations are available -->
+  <div *ngIf="!loading && filteredOperations.length === 0" class="alert alert-warning text-center mt-4 py-4 px-6 rounded-md shadow-md bg-yellow-200">
+    <strong class="text-xl">No operations found matching the filters.</strong>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <!-- Display loading state while fetching data -->
+  <div *ngIf="loading" class="alert alert-info">
+    <strong>Loading accounts...</strong>
+  </div>
+
+  <!-- Display accounts if they are available -->
+  <div *ngIf="!loading && accounts.length > 0">
+    <h3 class="mb-4 text-center text-primary font-weight-bold">Customer Accounts</h3>
+    <div *ngFor="let account of accounts" class="mb-4">
+      <div class="card shadow-lg rounded-lg border-0">
+        <div class="card-body">
+          <!-- Account ID -->
+          <h5 class="card-title text-uppercase text-dark font-weight-bold mb-2">Account ID: {{ account.id }}</h5>
+
+          <!-- Account Type -->
+          <h6 class="card-subtitle text-muted mb-3">Account Type: <span class="font-weight-semibold">{{ account.type }}</span></h6>
+
+          <!-- Balance -->
+          <p class="card-text">
+            <strong class="text-success font-size-lg">Balance: {{ account.balance | currency }}</strong>
+          </p>
+
+          <!-- View Operations Button -->
+          <button (click)="viewOperations(account.id)" class="btn btn-primary btn-block py-2 mt-3 rounded-pill shadow-sm">
+            <i class="fas fa-list"></i> View Operations
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Display message if no accounts are available -->
+  <div *ngIf="!loading && accounts.length === 0" class="alert alert-warning text-center mt-4">
+    No accounts available for this customer.
+  </div>
+</div>
