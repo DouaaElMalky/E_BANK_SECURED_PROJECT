@@ -1,20 +1,6 @@
 <h1>Projet JEE - Digital banking - Frontend</h1>
 <p>Une application de gestion de comptes bancaires où chaque client possède des comptes (courants ou épargnes) pouvant enregistrer des opérations de débit et crédit.</p>
 
-<h2>Fonctionnalités Principales</h2>
-<li>Authetification sécurisée avec JWT</li>
-<li>Tableau de bord : Statistiques et graphiques interactifs.</li>
-<li>Gestion des clients : Ajout, modification, suppression et recherche.</li>
-<li>Gestion des comptes : Ajout et administration des comptes.</li>
-<li>Historique des opérations : Débits, crédits et transactions avec suivi utilisateur.</li>
-
-<h2>Technologies Utilisées</h2>
-<li><strong>Backend : </strong>Spring Boot</li>
-<li><strong>Frontend : </strong>Angular</li>
-<li><strong>Securité : </strong>JWT (Json Web Token)</li>
-<li><strong>Base de données : </strong>MySQL</li>
-<li><strong>Autres outils : </strong>Chart JS ...</li>
-
 ----
 
 <h2>Authentification</h2>
