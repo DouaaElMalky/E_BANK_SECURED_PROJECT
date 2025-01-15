@@ -16,3 +16,15 @@
 <li><strong>Securité : </strong>JWT (Json Web Token)</li>
 <li><strong>Base de données : </strong>MySQL</li>
 <li><strong>Autres outils : </strong>Chart JS ...</li>
+
+----
+
+Auteur:
+----
+Realiseé par: <br>
+RIZKI Mohamed Amine <br>
+SERNANE Yahya <br>
+EL MALKY Douaa <br>
+AHCHOUCH Firdaws <br>
+FATHEDDINE Zineb <br>
+MALEK Jihane <br>
