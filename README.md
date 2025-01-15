@@ -1,0 +1,2 @@
+<h1>Projet JEE - Digital banking</h1>
+<h3>Ce projet consiste à développer une application web complète pour la gestion des comptes bancaires, en combinant des technologies modernes pour offrir une solution automatisée, sécurisée et conviviale. L'application permet de gérer les clients, les comptes (courants et épargnes) et les opérations (CREDIT, DEBIT et des VIREMENTS) de manière centralisée.</h3>
