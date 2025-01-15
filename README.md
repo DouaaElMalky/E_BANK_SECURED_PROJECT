@@ -25,6 +25,6 @@ Realiseé par: <br>
 RIZKI Mohamed Amine <br>
 SERNANE Yahya <br>
 EL MALKY Douaa <br>
-AHCHOUCH Firdaws <br>
-FATHEDDINE Zineb <br>
+AHCHOUCHE Firdawsse <br>
+FETH-EDDINE Zineb <br>
 MALEK Jihane <br>
